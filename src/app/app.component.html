@@ -1,0 +1,36 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<div id="mySidebar" class="sidebar">
+  <button class="closebtn" (click)="closeSideBar()">
+    <i class="fa fa-times"></i>
+  </button>
+  <a href="#">About</a>
+  <a href="#">Favourites</a>
+  <a href="#">Share</a>
+</div>
+<nav>
+  <ul>
+    <li>
+      <button class="btn" (click)="openSideBar()">
+        <i class="fa fa-bars"></i>
+      </button>
+    </li>
+    <li style="margin-right: auto" class="title">MyApp</li>
+    <!--  <li><div ></div></li> -->
+    <li>
+      <a href="#" routerLink="/fav"
+        ><button class="btn"><i class="fa fa-heart"></i></button
+      ></a>
+    </li>
+    <li>
+      <button class="btn" (click)="share()">
+        <i class="fa fa-share-alt"></i>
+      </button>
+    </li>
+  </ul>
+</nav>
+<div id="main" class="mainBody">
+  <router-outlet></router-outlet>
+</div>
